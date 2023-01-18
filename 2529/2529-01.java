@@ -4,8 +4,14 @@ class Solution {
         int n = 0;
 
         for (int num: nums) {
-            if (num > 0) p++;
-            if (num < 0) n++;
+            if (num > 0) {
+                p++;
+                continue;
+            }
+            if (num < 0) { 
+                n++;
+                continue;
+            }
         }
 
         return Math.max(p, n);
